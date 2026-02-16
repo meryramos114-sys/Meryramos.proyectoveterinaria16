@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Clínica Veterinaria en República Dominicana - Atención profesional para tus mascotas.">
+<meta name="keywords" content="veterinaria, mascotas, consulta, cirugías, peluquería canina, República Dominicana">
+<meta name="author" content="Clínica Veterinaria Patitas Felices">
+<title>Clínica Veterinaria 🐾 Patitas Felices</title>
+
+<!-- Bootstrap 5.3 CDN Oficial -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Font Awesome 6 CDN Oficial -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+
+<style>
+:root {
+    --primary: #2C3E50;
+    --secondary: #18BC9C;
+    --accent: #F39C12;
+    --white: #ffffff;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    scroll-behavior: smooth;
+    padding-top: 70px;
+}
+
+.custom-navbar { background-color: var(--primary); }
+
+.hero-section {
+    background: url('https://images.unsplash.com/photo-1583337130417-3346a1be7dee') center/cover no-repeat;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(44,62,80,0.7);
+}
+
+.btn-acento {
+    background-color: var(--accent);
+    color: var(--white);
+    transition: 0.3s;
+}
+.btn-acento:hover {
+    background-color: var(--secondary);
+    transform: scale(1.05);
+}
+
+.service-card img {
+    height: 200px;
+    object-fit: cover;
+}
+
+.service-card:hover,
+.team-card:hover,
+.contact-card:hover {
+    transform: translateY(-10px);
+    transition: 0.4s;
+}
+
+.team-img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+
+.custom-footer { background-color: var(--primary); }
+
+@keyframes heartbeat {
+    0% { transform: scale(1); }
+    25% { transform: scale(1.1); }
+    40% { transform: scale(1); }
+}
+.heartbeat { animation: heartbeat 1.5s infinite; }
+
+.rainbow-border {
+    border: 3px solid;
+    border-image: linear-gradient(45deg, red, orange, yellow, green, blue, indigo, violet) 1;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 5%;
+}
+
+@media(max-width:768px){
+    .hero-section{ height:70vh; }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top custom-navbar">
+<div class="container">
+<a class="navbar-brand fw-bold" href="#">🐾 Patitas Felices</a>
+<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNav">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="menuNav">
+<ul class="navbar-nav ms-auto">
+<li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
+<li class="nav-item"><a class="nav-link" href="#servicios">Servicios</a></li>
+<li class="nav-item"><a class="nav-link" href="#equipo">Equipo</a></li>
+<li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+</ul>
+</div>
+</div>
+</nav>
+
+<!-- INICIO -->
+<header id="inicio" class="hero-section text-white text-center">
+<div class="overlay"></div>
+<div class="container position-relative">
+<h1 class="display-4 fw-bold">🐶🐱 Cuidamos a quienes más amas ❤️</h1>
+<p class="lead mt-3">Atención veterinaria profesional en República Dominicana con amor y compromiso.</p>
+<a href="#contacto" class="btn btn-lg btn-acento mt-4">Agenda tu cita 🩺</a>
+</div>
+</header>
+
+<!-- SERVICIOS -->
+<section id="servicios" class="py-5">
+<div class="container text-center">
+<h2 class="mb-5 fw-bold">Nuestros Servicios</h2>
+<div class="row g-4">
+
+<div class="col-md-4">
+<div class="card service-card h-100 shadow">
+<img src="https://purina.com.do/sites/default/files/2022-10/purina-consulta-veterinaria-para-mascotas-lo-que-debes-saber.jpg" class="card-img-top">
+<div class="card-body">
+<i class="fa-solid fa-stethoscope fa-2x mb-3 text-secondary"></i>
+<h5>Consulta General</h5>
+<p>Chequeos médicos completos y diagnóstico preventivo.</p>
+</div>
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="card service-card h-100 shadow">
+<img src="https://holavet.com.ar/wp-content/uploads/2022/04/close-up-on-veterinarian-taking-care-of-pet-1.webp" class="card-img-top">
+<div class="card-body">
+<i class="fa-solid fa-user-doctor fa-2x mb-3 text-secondary"></i>
+<h5>Cirugías</h5>
+<p>Procedimientos quirúrgicos seguros con tecnología avanzada.</p>
+</div>
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="card service-card h-100 shadow">
+<img src="https://neozoo.com.ar/wp-content/uploads/2023/06/Iconos-e-imagenes-09.png" class="card-img-top">
+<div class="card-body">
+<i class="fa-solid fa-scissors fa-2x mb-3 text-secondary"></i>
+<h5>Peluquería</h5>
+<p>Estética y cuidado profesional para tu mascota.</p>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- EQUIPO -->
+<section id="equipo" class="py-5 bg-light">
+<div class="container text-center">
+<h2 class="mb-5 fw-bold">Nuestro Equipo</h2>
+<div class="row g-4">
+
+<div class="col-md-4">
+<div class="card shadow team-card p-3">
+<img src="https://randomuser.me/api/portraits/women/45.jpg" class="rounded-circle mx-auto team-img">
+<h5 class="mt-3">Dra. Ana López</h5>
+<p class="text-secondary">Especialista en Medicina General</p>
+<p>Más de 10 años cuidando la salud animal con dedicación.</p>
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="card shadow team-card p-3">
+<img src="https://randomuser.me/api/portraits/men/75.jpg" class="rounded-circle mx-auto team-img">
+<h5 class="mt-3">Dr. Carlos Méndez</h5>
+<p class="text-secondary">Cirujano Veterinario</p>
+<p>Especialista en procedimientos quirúrgicos avanzados.</p>
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="card shadow team-card p-3">
+<img src="https://randomuser.me/api/portraits/women/68.jpg" class="rounded-circle mx-auto team-img">
+<h5 class="mt-3">Dra. Laura Gómez</h5>
+<p class="text-secondary">Dermatología y Estética</p>
+<p>Experta en cuidado dermatológico y peluquería.</p>
+</div>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- TESTIMONIOS -->
+<section class="py-5">
+<div class="container">
+<h2 class="text-center mb-5 fw-bold">Lo que dicen nuestros clientes 💬</h2>
+
+<div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+<div class="carousel-inner"></div>
+
+<button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+<span class="carousel-control-prev-icon"></span>
+</button>
+<button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+<span class="carousel-control-next-icon"></span>
+</button>
+</div>
+</div>
+</section>
+
+<!-- CONTACTO -->
+<section id="contacto" class="py-5 bg-light">
+<div class="container">
+<div class="row g-4">
+
+<div class="col-md-4">
+<div class="card shadow contact-card p-4 text-center">
+<h3>📞 Llámanos</h3>
+<p class="fs-3 fw-bold text-secondary">
+<a href="tel:+18095551234" class="text-decoration-none">+1 (809) 555-1234</a>
+</p>
+<a href="https://wa.me/18095551234" target="_blank" class="btn btn-success">
+<i class="fab fa-whatsapp"></i> WhatsApp
+</a>
+</div>
+</div>
+
+<div class="col-md-8">
+<div class="card shadow p-4">
+<h3>Envíanos un mensaje ✉️</h3>
+<form id="contactForm">
+<div class="mb-3">
+<input type="text" class="form-control" id="nombre" placeholder="Nombre" required>
+</div>
+<div class="mb-3">
+<input type="email" class="form-control" id="email" placeholder="Email" required>
+<div class="invalid-feedback">Ingrese un email válido.</div>
+</div>
+<div class="mb-3">
+<textarea class="form-control" id="mensaje" rows="4" placeholder="Mensaje" required></textarea>
+</div>
+<button type="submit" class="btn btn-acento w-100">Enviar Mensaje</button>
+</form>
+</div>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- MODAL -->
+<div class="modal fade" id="confirmModal">
+<div class="modal-dialog">
+<div class="modal-content text-center p-4">
+<h4>✅ ¡Mensaje Preparado!</h4>
+<p>Tu aplicación de correo se ha abierto correctamente 📧🐾</p>
+<button class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+</div>
+</div>
+</div>
+
+<!-- FOOTER -->
+<footer class="text-white text-center py-4 custom-footer">
+<div class="container">
+<div class="mb-3">
+<i class="fab fa-facebook fa-2x mx-2"></i>
+<i class="fab fa-instagram fa-2x mx-2"></i>
+<i class="fab fa-twitter fa-2x mx-2"></i>
+<i class="fab fa-linkedin fa-2x mx-2"></i>
+<i class="fab fa-youtube fa-2x mx-2"></i>
+</div>
+<p>📍 Santo Domingo, República Dominicana | 🕒 Lunes - Sábado 8:00am - 6:00pm</p>
+<p>&copy; 2026 Clínica Veterinaria Patitas Felices</p>
+</div>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function(){
+
+const testimonials = [
+{nombre:"María Pérez", comentario:"Excelente atención 🐶❤️", genero:"women"},
+{nombre:"Juan Rodríguez", comentario:"Mi gato salió feliz 😺✨", genero:"men"},
+{nombre:"Laura Sánchez", comentario:"Muy profesionales 🏥👏", genero:"women"},
+{nombre:"Pedro Martínez", comentario:"Servicio rápido y confiable 💯", genero:"men"},
+{nombre:"Carmen López", comentario:"La mejor veterinaria 🐾🌟", genero:"women"},
+{nombre:"Luis Gómez", comentario:"Gran equipo médico 👨‍⚕️", genero:"men"},
+{nombre:"Ana Torres", comentario:"Atención personalizada ❤️", genero:"women"},
+{nombre:"Miguel Díaz", comentario:"Recomendado 100% 👍", genero:"men"},
+{nombre:"Sofía Ramírez", comentario:"Mi perrito feliz 🐕💕", genero:"women"},
+{nombre:"Carlos Herrera", comentario:"Excelente trato 👏🐾", genero:"men"}
+];
+
+const carouselInner = document.querySelector(".carousel-inner");
+let slides = [];
+
+for(let i=0;i<testimonials.length;i+=4){
+slides.push(testimonials.slice(i,i+4));
+}
+
+slides.forEach((group,index)=>{
+let active = index===0 ? "active" : "";
+let slide = `<div class="carousel-item ${active}">
+<div class="row g-4">`;
+
+group.forEach((item,i)=>{
+slide+=`
+<div class="col-md-3">
+<div class="card p-3 text-center shadow rainbow-border">
+<img src="https://randomuser.me/api/portraits/${item.genero}/${40+i}.jpg"
+class="rounded-circle mx-auto heartbeat mb-3" width="80" height="80">
+<h6>${item.nombre}</h6>
+<p>${item.comentario}</p>
+<i class="fa-solid fa-paw text-secondary"></i>
+</div>
+</div>`;
+});
+
+slide+=`</div></div>`;
+carouselInner.innerHTML+=slide;
+});
+
+const form = document.getElementById("contactForm");
+form.addEventListener("submit", function(e){
+e.preventDefault();
+
+let nombre = document.getElementById("nombre").value;
+let email = document.getElementById("email");
+let mensaje = document.getElementById("mensaje").value;
+let regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+if(!regex.test(email.value)){
+email.classList.add("is-invalid");
+return;
+} else{
+email.classList.remove("is-invalid");
+}
+
+window.location.href=`mailto:clinicaveterinaria@example.com?subject=Contacto&body=Nombre: ${nombre}%0AEmail: ${email.value}%0AMensaje: ${mensaje}`;
+
+let modal = new bootstrap.Modal(document.getElementById('confirmModal'));
+modal.show();
+form.reset();
+});
+
+});
+</script>
+
+</body>
+</html>
